@@ -21,31 +21,30 @@ def input_int(mensaje):
         except ValueError:
             print("Por favor ingresar un numero entero valido.")
 
+num1 = input_float("Ingrese el primer numero: ")
+num2 = input_float("Ingrese el segundo numero: ")
+tipo_operacion = input_int("Ingrese el numero del tipo operacion que quiere realizar. "
+                           "\nTipos de operaciones disponibles: "
+                           "\n1. Sumar"
+                           "\n2. Restar"
+                           "\n3. Multiplicar"
+                           "\n4. Dividir\n")
 
-run = True
-while run:
-    num1 = input_float("Ingrese el primer numero: ")
-    num2 = input_float("Ingrese el segundo numero: ")
-    tipo_operacion = input_int("Ingrese el numero del tipo operacion que quiere realizar. "
-                               "\nTipos de operaciones disponibles: "
-                               "\n1. Sumar"
-                               "\n2. Restar"
-                               "\n3. Multiplicar"
-                               "\n4. Dividir\n")
+if tipo_operacion == 1:
+    operacion = Operaciones.sumar(num1, num2)
+    print(f"\nEl resultado de {num1} + {num2} es {operacion}")
 
-    if tipo_operacion == 1:
-        operacion = Operaciones.sumar(num1, num2)
-    elif tipo_operacion == 2:
-        operacion = Operaciones.restar(num1, num2)
-    elif tipo_operacion == 3:
-        operacion = Operaciones.multiplicar(num1, num2)
-    elif tipo_operacion == 4:
-        operacion = Operaciones.dividir(num1, num2)
-    else:
-        print("ERROR: Operacion no disponible")
-        continue
+elif tipo_operacion == 2:
+    operacion = Operaciones.restar(num1, num2)
+    print(f"\nEl resultado de {num1} - {num2} es {operacion}")
 
-    print(f"\nEl resultado de su operacion es {operacion}")
-    run = False
+elif tipo_operacion == 3:
+    operacion = Operaciones.multiplicar(num1, num2)
+    print(f"\nEl resultado de {num1} * {num2} es {operacion}")
 
+elif tipo_operacion == 4:
+    operacion = Operaciones.dividir(num1, num2)
+    print(f"\nEl resultado de {num1} / {num2} es {operacion}")
 
+else:
+    print("ERROR: Operacion no disponible")
