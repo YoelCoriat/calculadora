@@ -43,8 +43,11 @@ elif tipo_operacion == 3:
     print(f"\nEl resultado de {num1} * {num2} es {operacion}")
 
 elif tipo_operacion == 4:
-    operacion = Operaciones.dividir(num1, num2)
-    print(f"\nEl resultado de {num1} / {num2} es {operacion}")
+    if num2 == 0:
+        print("No se puede dividir entre 0.")
+    else:
+        operacion = Operaciones.dividir(num1, num2)
+        print(f"\nEl resultado de {num1} / {num2} es {operacion}")
 
 else:
     print("ERROR: Operacion no disponible")
