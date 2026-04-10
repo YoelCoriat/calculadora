@@ -45,7 +45,7 @@ while run:
         print("ERROR: Operacion no disponible")
         continue
 
-    print(operacion)
+    print(f"\nEl resultado de su operacion es {operacion}")
     run = False
 
 
