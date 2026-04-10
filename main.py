@@ -32,17 +32,19 @@ while run:
                                "\n2. Restar"
                                "\n3. Multiplicar"
                                "\n4. Dividir\n")
+    print(tipo_operacion)
     if tipo_operacion == 1:
         operacion = Operaciones.sumar(num1, num2)
-    if tipo_operacion == 2:
+    elif tipo_operacion == 2:
         operacion = Operaciones.restar(num1, num2)
-    if tipo_operacion == 3:
+    elif tipo_operacion == 3:
         operacion = Operaciones.multiplicar(num1, num2)
-    if tipo_operacion == 4:
+    elif tipo_operacion == 4:
         operacion = Operaciones.dividir(num1, num2)
     else:
-        print("Operacion no disponible")
+        print("ERROR: Operacion no disponible")
         continue
+
     print(operacion)
     run = False
 
