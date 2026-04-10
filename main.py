@@ -32,7 +32,7 @@ while run:
                                "\n2. Restar"
                                "\n3. Multiplicar"
                                "\n4. Dividir\n")
-    print(tipo_operacion)
+
     if tipo_operacion == 1:
         operacion = Operaciones.sumar(num1, num2)
     elif tipo_operacion == 2:
